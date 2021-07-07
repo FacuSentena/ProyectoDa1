@@ -1,0 +1,222 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\..\Dominio\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\..\Dominio\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C0C5B31F-85DC-4170-92BB-FD127541F8F5}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>InterfazDeUsuario</RootNamespace>
+    <AssemblyName>InterfazDeUsuario</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <NoWin32Manifest>true</NoWin32Manifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\..\Dominio\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\..\Dominio\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="PantallaAgregarCategoria.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PantallaAgregarCategoria.Designer.cs">
+      <DependentUpon>PantallaAgregarCategoria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PantallaCambiarContrasena.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PantallaCambiarContrasena.Designer.cs">
+      <DependentUpon>PantallaCambiarContrasena.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PantallaCantidadContrasenasPorGrupo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PantallaCantidadContrasenasPorGrupo.Designer.cs">
+      <DependentUpon>PantallaCantidadContrasenasPorGrupo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PantallaCategorias.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PantallaCategorias.Designer.cs">
+      <DependentUpon>PantallaCategorias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PantallaContrasenas.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PantallaContrasenas.Designer.cs">
+      <DependentUpon>PantallaContrasenas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PantallaCrearParUsuarioContrasena.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PantallaCrearParUsuarioContrasena.Designer.cs">
+      <DependentUpon>PantallaCrearParUsuarioContrasena.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PantallaCrearTarjetaDeCredito.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PantallaCrearTarjetaDeCredito.Designer.cs">
+      <DependentUpon>PantallaCrearTarjetaDeCredito.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PantallaIngresarDataBreaches.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PantallaIngresarDataBreaches.Designer.cs">
+      <DependentUpon>PantallaIngresarDataBreaches.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PantallaIngreso.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PantallaIngreso.Designer.cs">
+      <DependentUpon>PantallaIngreso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PantallaInicial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PantallaInicial.Designer.cs">
+      <DependentUpon>PantallaInicial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PantallaPrincipal.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PantallaPrincipal.Designer.cs">
+      <DependentUpon>PantallaPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PantallaTarjetasDeCredito.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PantallaTarjetasDeCredito.Designer.cs">
+      <DependentUpon>PantallaTarjetasDeCredito.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PantallaVerDataBreaches.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PantallaVerDataBreaches.Designer.cs">
+      <DependentUpon>PantallaVerDataBreaches.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="PantallaAgregarCategoria.resx">
+      <DependentUpon>PantallaAgregarCategoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PantallaCambiarContrasena.resx">
+      <DependentUpon>PantallaCambiarContrasena.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PantallaCantidadContrasenasPorGrupo.resx">
+      <DependentUpon>PantallaCantidadContrasenasPorGrupo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PantallaCategorias.resx">
+      <DependentUpon>PantallaCategorias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PantallaContrasenas.resx">
+      <DependentUpon>PantallaContrasenas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PantallaCrearParUsuarioContrasena.resx">
+      <DependentUpon>PantallaCrearParUsuarioContrasena.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PantallaCrearTarjetaDeCredito.resx">
+      <DependentUpon>PantallaCrearTarjetaDeCredito.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PantallaIngresarDataBreaches.resx">
+      <DependentUpon>PantallaIngresarDataBreaches.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PantallaIngreso.resx">
+      <DependentUpon>PantallaIngreso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PantallaInicial.resx">
+      <DependentUpon>PantallaInicial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PantallaPrincipal.resx">
+      <DependentUpon>PantallaPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PantallaTarjetasDeCredito.resx">
+      <DependentUpon>PantallaTarjetasDeCredito.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PantallaVerDataBreaches.resx">
+      <DependentUpon>PantallaVerDataBreaches.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Dominio\AccesoADatos\AccesoADatos.csproj">
+      <Project>{1ed5ab52-b85a-4238-a933-c8cf001660dd}</Project>
+      <Name>AccesoADatos</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Dominio\Dominio\Dominio.csproj">
+      <Project>{8064abc3-41f6-4ad8-bb99-304b6a1f868e}</Project>
+      <Name>Dominio</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Este proyecto hace referencia a los paquetes NuGet que faltan en este equipo. Use la restauración de paquetes NuGet para descargarlos. Para obtener más información, consulte http://go.microsoft.com/fwlink/?LinkID=322105. El archivo que falta es {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\..\Dominio\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\..\Dominio\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\..\Dominio\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\Dominio\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\..\Dominio\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\..\Dominio\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+</Project>
